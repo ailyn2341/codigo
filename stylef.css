@@ -1,0 +1,110 @@
+body {
+  background-color: #c3ecfc;
+  font-family: 'Arial', sans-serif;
+  color: #0225e9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.menu-bar {
+  background-color: #3beeee;
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.contenido {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.imagen-izquierda {
+  width: 30%;
+}
+
+.imagen-izquierda img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cuadro {
+  border: 3px solid #333;
+  padding: 20px;
+  width: 300px;
+  background-color: #61f0e4;
+  text-align: right;
+}
+
+#seccion-medicamento {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #b2ebf2;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #999;
+  display: none; 
+}
+#seccion-naturista{
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #b2ebf2;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #999;
+  display: none; 
+}
+#seccion-consultas{
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #b2ebf2;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #999;
+  display: none; 
+}
+#seccion-bebes{
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #b2ebf2;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #999;
+  display: none; 
+}
+
+.cuadro2 img {
+  width: 150px;
+  height: auto;
+}
+#seccion-medicamento {
+  display: none;
+}
+.h3{
+  color: #0225e9;
+}
+.contenido-oculto {
+  display: none;
+}
