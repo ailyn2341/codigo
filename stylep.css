@@ -1,0 +1,98 @@
+body {
+    background-color: #FFAA4D;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #4B2E03;
+}
+
+.seccion {
+    display: none;
+}
+
+.activa {
+    display: block;
+}
+
+#bienvenida {
+    background-color: #FF7F32;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#formulario-seccion form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.checkbox-container {
+    display: grid;
+    gap: 10px;
+    justify-items: start;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #FF7F32;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF4F1F;
+}
+
+img {
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    display: block;
+}
+
+.detalle-pedido ul {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.detalle-pedido li {
+    margin-bottom: 5px;
+}
+
+.detalle-pedido strong {
+    color: #FF7F32;
+}
+
+.seccion input[type="radio"] {
+    margin-right: 10px;
+}
