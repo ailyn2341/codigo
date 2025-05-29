@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #4dc6eb;
+}
+
+h1 {
+  text-align: center;
+  color: #3577db;
+  margin-bottom: 20px;
+}
+
+.menu-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.menu-item {
+  text-decoration: none;
+  background-color: #6ba1c5;
+  color: rgb(10, 14, 20);
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #61dde6;
+}
+
+.contenido,
+.contenido-oculto {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+  background: rgb(81, 231, 206);
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contenido-oculto {
+  display: none;
+}
+
+.imagen-izquierda {
+  float: left;
+  margin-right: 15px;
+}
+
+.imagen-izquierda img {
+  width: 180px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.cuadro {
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.cuadro2 {
+  text-align: center;
+}
+
+.cuadro2 label {
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.cuadro2 img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn-comprar,
+.btn-regresar {
+  margin: 10px 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #717af7;
+  color: rgb(90, 181, 223);
+  transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover,
+.btn-regresar:hover {
+  background-color: #49bbd8;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #35b9b9;
+  border-radius: 4px;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #30a8bd;
+  border: none;
+  color: rgb(20, 190, 168);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #3194b3;
+}
