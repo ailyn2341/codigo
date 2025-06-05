@@ -67,8 +67,14 @@ h2 {
 }
 
 .cuadro2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
   text-align: center;
 }
+
 
 .cuadro2 label {
   cursor: pointer;
@@ -98,6 +104,14 @@ h2 {
   color: rgb(90, 181, 223);
   transition: background-color 0.3s ease;
 }
+.tamaño-imagen {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
 
 .btn-comprar:hover,
 .btn-regresar:hover {
