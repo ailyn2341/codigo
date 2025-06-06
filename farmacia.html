@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Farmacia SOFI</title>
+  <link rel="stylesheet" href="stylef.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("jElsfpiQFdwmm3vBf"); 
+  })();
+</script>
+
+</head>
+<body>
+  <h1>FARMACIA "SOFI"</h1>
+  <div class="menu-bar">
+    <a href="#" class="menu-item" onclick="mostrarMenu()">Inicio</a>
+    <a href="#" class="menu-item" onclick="mostrarMedicamentos()">Medicamentos</a>
+    <a href="#" class="menu-item" onclick="mostrarConsultas()">Consulta</a>
+    <a href="#" class="menu-item" onclick="mostrarNaturista()">Naturista</a>
+    <a href="#" class="menu-item" onclick="mostrarBebes()">Bebés</a>
+    <a href="#" class="menu-item" onclick="mostrarPromociones()">Promociones</a>
+  </div>
+  <div class="contenido" id="contenido-inicio">
+    <div class="imagen-izquierda">
+      <img src="logo.jpg" alt="logo" />
+    </div>
+    <div class="cuadro">
+      <p>
+        Agradecemos tu preferencia en <br />
+        Farmacia "SOFI".<br />
+        ¿En qué te podemos ayudar?<br />
+        Podrás observar nuestro menú en la parte de arriba,<br />
+        así como algunos medicamentos que te podemos ofrecer,<br />
+        también puedes realizar tu cita en línea<br />
+        y observar algunas de las promociones que tenemos hoy.<br />
+        ¿Alguna queja, duda o recomendación?<br />
+        Comunícate al siguiente número.
+      </p>
+    </div>
+  </div>
+ 
+  <div id="seccion-medicamento" class="contenido-oculto">
+   
+    <h2>NUESTROS MEDICAMENTOS:</h2>
+    <div class="cuadro2">
+     <label><input type="checkbox" class="producto" data-precio="20"><img src="paracetamol.jpg" class="tamaño-imagen" alt="Paracetamol">
+      <h3>Paracetamol...$20</h3>
+     </label>
+      <label><input type="checkbox" class="producto" data-precio="45"><img src="ibuprofeno.jpg" class="tamaño-imagen" alt="ibuprofeno">
+       <h3> Ibuprofeno...$45</h3>
+    </label>
+          <label><input type="checkbox" class="producto" data-precio="50"><img src="trimetroprima.jpg" class="tamaño-imagen" alt="trimetroprima"><br>
+    <h3>Trimetroprima...$50</h3>
+          </label>
+      <label><input type="checkbox" class="producto" data-precio="70"><img src="bioelectro.jpg" class="tamaño-imagen"  alt="bioelectro">
+        <h3>Bioelectro...$70</h3>
+      </label>
+      <label><input type="checkbox" class="producto" data-precio="100"><img src="amoxicilina.jpg" class="tamaño-imagen" alt="amoxicilina">
+      <h3>Amoxicilina...$100</h3>
+          </label>
+      <label><input type="checkbox" class="producto" data-precio="20"><img src="loperamida.jpg" class="tamaño-imagen" alt="loperamida"><br>
+    <h3>Loperamida...$20</h3>
+          </label>
+    <label><input type="checkbox" class="producto" data-precio="55"><img src="ampicilina.jpg" class="tamaño-imagen" alt="ampicilina">
+      <h3>Ampicilina...$55</h3>
+    </label>
+        <label><input type="checkbox" class="producto" data-precio="50"><img src="Benzonatato.jpg" class="tamaño-imagen" alt="Benzonatato">
+      <h3>Benzonatato...$50</h3>
+          </label>
+        <label><input type="checkbox" class="producto" data-precio="55"><img src="Broxtorfan.jpg" class="tamaño-imagen" alt="Broxtorfan"><br>
+    <h3>Broxtorfan..$55</h3>
+          </label>
+    <label><input type="checkbox" class="producto" data-precio="60"><img src="Roselcápsulas.jpg" class="tamaño-imagen"  alt="Roselcápsulas">
+       <h3>Rosel Capsula...$60</h3>
+    </label>
+        <label><input type="checkbox" class="producto" data-precio="100"><img src="cefriaxona.jpg" class="tamaño-imagen" alt="cefriaxona">
+      <h3>Ceftriaxona...$100</h3>
+          </label>
+      <label><input type="checkbox" class="producto" data-precio="60"><img src="Dropropizina.jpg" class="tamaño-imagen" alt="Dropropizina"><br>
+   <h3>Dropropizina...$60</h3> 
+      </label>
+    <label><input type="checkbox" class="producto" data-precio="20"><img src="Dexametasona.jpg" class="tamaño-imagen" alt="Dexametasona">
+       <h3>Dexametasona...$20</h3>
+    </label>
+      <label><input type="checkbox" class="producto" data-precio="18"><img src="Omeprazol.jpg" class="tamaño-imagen" alt="Omeprazol">
+    <h3>Omeprazol...$18</h3>
+          </label>
+      <label><input type="checkbox" class="producto" data-precio="55"><img src="Bateral.jpg" class="tamaño-imagen" alt="Bateral"><br>
+   <h3>Bateral...$55</h3>
+          </label><br>
+      <h3>Tu total es: $<span id="total-medicamento">0</span></h3><br>
+      <button id="btnComprarMedicamento" class="btn-comprar">Comprar</button>
+      <button class="btn-regresar" onclick="mostrarMenu()">Regresar al Menú</button>
+    </div>
+  </div>
+    
+  
+
+  <div id="seccion-naturista" class="contenido-oculto">
+    
+    <h2>PRODUCTOS NATURISTAS</h2>
+    <div class="cuadro2">
+      <label><input type="checkbox" class="producto" data-precio="85"><img src="ajologrip.jpg" class="tamaño-imagen" alt="ajologrip">
+      <h3>ajologrip jarabe...$85</h3>
+      </label>
+      <label><input type="checkbox" class="producto" data-precio="75"><img src="Eucalin.jpg" class="tamaño-imagen" alt="Eucalin">
+      <h3>Eucalin...$75</h3>
+        </label>
+      <label><input type="checkbox" class="producto" data-precio="60"><img src="Ajolotius.jpg" class="tamaño-imagen"  alt="Ajolotius"><br>
+      <h3>Ajolotius...$60</h3>
+        </label>
+    <label><input type="checkbox" class="producto" data-precio="90"><img src="Levadurcerveza.jpg" class="tamaño-imagen"  alt="Levaduracerveza">
+      <h3>Levadura de cerveza..$90</h3>
+    </label>
+      <label><input type="checkbox" class="producto" data-precio="45"><img src="castañodeindias.jpg" class="tamaño-imagen" alt="Castañodeindias">
+      <h3>Castaña de indias..$45</h3>
+        </label>
+        <label><input type="checkbox" class="producto" data-precio="250"><img src="omega.jpg" class="tamaño-imagen" alt="omega"><br>
+  <h3>Omega 3..250</h3>
+        </label>
+  <label><input type="checkbox" class="producto" data-precio="85"><img src="aloevera.jpg" class="tamaño-imagen" alt="aloevera">
+       <h3>Aloe vera...$85</h3>
+  </label>
+      <label><input type="checkbox" class="producto" data-precio="55"><img src="Jabóntepezcohuite.jpg" class="tamaño-imagen" alt="jabóntepezcohuite">
+      <h3>Jabón tepezcohuite...$55</h3>
+        </label>
+      <label><input type="checkbox" class="producto" data-precio="20"><img src="Gotasojos.jpg" class="tamaño-imagen" alt="gotas ojos"><br>
+ <h3>Gotas manzanillas ojos...$20</h3> 
+        </label>
+  <label><input type="checkbox" class="producto" data-precio="55"><img src="Artritisyriumatismo.jpg" class="tamaño-imagen" alt="Artritisyriumatismo">
+       <h3>Artritis y riumatismo...$55</h3>
+  </label>
+        <label><input type="checkbox" class="producto" data-precio="250"><img src="Colágenohidrolizado.jpg" class="tamaño-imagen" alt="Colágenohidrolizado">
+      <h3>Colágeno hidrolizado...$250</h3>
+        </label>
+        <label><input type="checkbox" class="producto" data-precio="90"><img src="vitaminaE.jpg" class="tamaño-imagen" alt="VitaminaE"><br>
+ <h3>Vitamina E...$90</h3> 
+        </label>
+  <label><input type="checkbox" class="producto" data-precio="60"><img src="tevaleriana.jpg" class="tamaño-imagen2 alt="tevaleriana">
+  <h3>Te de valeriana $60</h3>
+  </label>
+  <br>
+      <p><h3>Tu total es: $<span id="total-naturista">0</span></h3><br></p>
+     <p> <button id="btnComprarNaturista" class="btn-comprar">Comprar</button><br></p>
+    <p> <button class="btn-regresar" onclick="mostrarMenu()">Regresar al Menú</button><br></p>
+    </div>
+  </div>
+    
+
+  <div id="seccion-bebes" class="contenido-oculto">
+    
+    <h2>ARTÍCULOS PARA BEBÉS</h2>
+    <div class="cuadro2">
+     <label><input type="checkbox" class="producto" data-precio="30"><img src="mamilaazul.jpg" class="tamaño-imagen" alt="mamilaazul">
+        <h3>Mamila Azul...$30</h3>
+     </label>
+      <label><input type="checkbox" class="producto" data-precio="30"><img src="mamilarosa.jpg" class="tamaño-imagen" alt="mamilarosa">
+      <h3>Mamila Rosa...$30</h3>
+      </label>
+      <label><input type="checkbox" class="producto" data-precio="20"><img src="silicon.jpg" class="tamaño-imagen" alt="silicon"><br>
+<h3>Silicon...$20</h3>
+        </label>
+    <label><input type="checkbox" class="producto" data-precio="10"><img src="chuponazul.jpg" class="tamaño-imagen" alt="chuponazul">
+       <h3>Chupon Azul..$10</h3>
+    </label>
+      <label><input type="checkbox" class="producto" data-precio="10"><img src="chuponrosa.jpg" class="tamaño-imagen" alt="chuponrosa">
+      <h3>Chupon Rosa..$10</h3>
+        </label>
+      <label><input type="checkbox" class="producto" data-precio="80"><img src="pañales.jpg" class="tamaño-imagen" alt="pañales"><br>
+<h3>Pañales..80</h3> 
+        </label>
+  <label><input type="checkbox" class="producto" data-precio="35"><img src="aceite.jpg" class="tamaño-imagen" alt="aceite">
+      <h3>Aceite...$35</h3>
+  </label>
+      <label><input type="checkbox" class="producto" data-precio="40"><img src="crema.jpg" class="tamaño-imagen" alt="crema">
+      <h3>Crema...$40</h3>
+        </label>
+        <label><input type="checkbox" class="producto" data-precio="20"><img src="toallitas.jpg" class="tamaño-imagen" alt=" toallitas"><br>
+  <h3>Toallitas...$20</h3> 
+        </label>
+  <label><input type="checkbox" class="producto" data-precio="15"><img src="gerber.jpg" class="tamaño-imagen" alt="gerber">
+        <h3>Gerber...$15</h3>
+  </label>
+      <label><input type="checkbox" class="producto" data-precio="10"><img src="goteros.jpg" class="tamaño-imagen" alt="goteros">
+      <h3>Goteros...$10</h3>
+        </label>
+        <label><input type="checkbox" class="producto" data-precio="90"><img src="leche.jpg" class="tamaño-imagen" alt="leche"><br> 
+          <h3>Leche...$90</h3> 
+        </label><br><br>
+      <h3>Tu total es: $<span id="total-bebes">0</span></h3>
+      <button id="btnComprarBebes" class="btn-comprar">Comprar</button>
+      <button class="btn-regresar" onclick="mostrarMenu()">Regresar al Menú</button>
+    </div>
+  </div>
+
+  
+  <form class="form-register" 
+  action="https://formspree.io/f/mwpbpgjq"
+  method="POST">
+  <div id="seccion-consulta" class="contenido-oculto">
+  <h2>Consulta tu cita</h2>
+  <div class="cuadro2">
+    <form id="formConsulta">
+      <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingresa Su Nombre">
+      <input class="controls" type="text" name="apellido" id="apellido" placeholder="Ingresa Su Apellido">
+      <input class="controls" type="email" name="correo" id="correo" placeholder="Ingresa Su Correo">
+      <input class="controls" type="date" name="date" id="date" placeholder="Ingresa La Fecha Deseada">
+      <input class="controls" type="time" name="time" id="time" placeholder="Ingresa La Fecha Hora Deseada">
+      <textarea class="controls" name="message" placeholder="asunto"></textarea>
+      <input class="botons" type="submit" value="ENVIAR" onclick="validarFormulario()">
+      <button type="button" id="btnGenerarPDFConsulta">Generar PDF de Confirmación</button><br>
+       <button class="btn-regresar" onclick="mostrarMenu()">Regresar al Menú</button>
+    </form>
+  </form>
+  </div>
+</div>
+
+
+</div>
+
+  <div id="seccion-promociones" class="contenido-oculto">
+    <h2>Promociones</h2>
+    <p>Consulta nuestras promociones vigentes en tienda.</p>
+    <button class="btn-regresar" onclick="mostrarMenu()">Regresar al Menú</button>
+  </div>
+
+  <div id="seccion-pago" class="contenido-oculto">
+    <h2>Forma de pago</h2>
+    <div>
+      <label><input type="radio" name="formaPago" value="transferencia"> Transferencia</label><br />
+      <label><input type="radio" name="formaPago" value="tarjeta"> Tarjeta</label>
+    </div>
+    <div id="form-tarjeta" class="contenido-oculto">
+      <h3>Datos de tarjeta</h3>
+      <form id="formTarjeta" novalidate>
+        <label>Nombre del titular:<br>
+          <input type="text" id="nombreTitular" required />
+        </label><br>
+        <label>Número de tarjeta:<br>
+          <input type="text" id="numeroTarjeta" maxlength="16" required pattern="\d{16}" />
+        </label><br>
+        <label>CVV:<br>
+          <input type="text" id="cvv" maxlength="3" required pattern="\d{3}" />
+        </label><br>
+        <label>Fecha de vencimiento:<br>
+          <input type="month" id="fechaVencimiento" required />
+        </label><br>
+        <button type="button" id="btnPagarTarjeta">Pagar</button>
+         <button class="btn-regresar" onclick="mostrarMenu()">Regresar al Menú</button>
+      </form>
+    </div>
+   <div id="form-direccion" style="display: none;">
+  <h3>Datos para Transferencia</h3>
+  <p><strong>Número de cuenta:</strong> 2932948293748923</p>
+  <p><strong>Banco:</strong> VIVISMX</p>
+ 
+  <form id="formDireccion" enctype="multipart/form-data">
+    <label>Dirección:<br>
+      <input type="text" id="direccion" required />
+    </label><br>
+    <label>Teléfono:<br>
+      <input type="tel" id="telefono" required pattern="[0-9]{10}" />
+    </label><br>
+    <button type="button" id="btnEnviarDireccion">Enviar</button>
+     <button class="btn-regresar" onclick="mostrarMenu()">Regresar al Menú</button>
+  </form>
+</div>
+<div id="form-direcciont" style="display: none;">
+  <h2>Tarjeta</h2>
+  <form id="formDirecciont" enctype="multipart/form-data">
+    <label>Dirección:<br>
+      <input type="text" id="direccion" required />
+    </label><br>
+    <label>Teléfono:<br>
+      <input type="tel" id="telefono" required pattern="[0-9]{10}" />
+    </label><br>
+    <button type="button" id="btnEnviarDirecciont">Enviar</button>
+
+     <button class="btn-regresar" onclick="mostrarMenu()">Regresar al Menú</button>
+  </form>
+</div>
+
+  <script src="scriptf.js"></script>
+  
+</body>
+</html> 
